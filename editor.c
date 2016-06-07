@@ -1,4 +1,5 @@
 #include <ncurses.h>
+#include <stdio.h>
 
 int ROW, COL;
 const int ESC = 27;
@@ -18,6 +19,9 @@ void ensureposition(int* y, int* x) {
 
 int main() {
     int ch, x, y;
+    char fname[80];
+    FILE *fp;
+    unsigned int *data;
 
     initscr();
     cbreak();
@@ -54,6 +58,20 @@ int main() {
                     case ESC:          /* Press ESC twice to exit.           */
                         endwin();
                         return 0;
+                        break;
+                    case 'w':
+                        move(ROW-1, 0);
+                        printw("Enter a file name (up to 80 characters): ");
+                        //echo();
+                        getstr(fname);
+                        //noecho();
+                        fp = fopen(fname, "w");
+                        if (fp == NULL) {
+                            perror("Cannot open file");
+                        }
+                        inchnstr(data, 1);
+                        fputs((const char *)data, fp);
+                        fclose(fp);
                         break;
                     default:
                         break;
