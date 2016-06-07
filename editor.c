@@ -29,8 +29,9 @@ int main() {
     start_color();                    /* Yay colors!                         */
     init_pair(1, COLOR_RED, COLOR_WHITE);
 
+    getyx(stdscr, y, x);
 
-    attron(COLOR_PAIR(1));
+    // attron(COLOR_PAIR(1));
 
     while (true) {
         ch = getch();
@@ -60,7 +61,7 @@ int main() {
                 break;
             default:
                 addch(ch);
-                getyx(stdscr, y, x);
+                //getyx(stdscr, y, x);
                 break;
         }
         ensureposition(&y, &x);

@@ -5,3 +5,23 @@ To compile and run a script, just do `make run src={script_name}`. E.g. for the 
 
 Examples are inspired by the [Ncurses Programming
 Howto](http://tldp.org/HOWTO/NCURSES-Programming-HOWTO/) by Pradeep Padala.
+
+                   ___
+                ffdasdfa
+                fdf ..  d
+               dff   >  f
+                 d ---- f
+                  aaaaaf
+                    ||
+                  //~~\\
+              //// ~~~~ \\\\\
+             '''''  ||''''''''\
+           // {     ||     }  \\
+         ///  {     ||     }   \\
+        ###   {     ||     }    \\
+       # # #  \\    vv    //     %%
+               \   ____   /       %
+                |//    \\|
+                ||      ||
+                ||      ||
+              O===P    Q===D
