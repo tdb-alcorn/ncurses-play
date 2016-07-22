@@ -8,7 +8,7 @@ compile-debug:
 	gcc -g $(src).c -lncurses -o $(src)-debug
 
 debug: compile-debug
-	valgrind --leak-check=yes ./$(src)
+	valgrind --leak-check=full ./$(src)
 
 clean:
 	rm -r *.dSYM
